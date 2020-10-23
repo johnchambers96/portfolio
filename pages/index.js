@@ -3,11 +3,7 @@ import Header from "../components/header";
 import Timeline from "../components/timeline";
 import Contact from "../components/contact";
 import get from "lodash.get";
-
-const client = require("contentful").createClient({
-  space: "process.env.contentful_space_id",
-  accessToken: "process.env.contentful_access_token",
-});
+import { ContentfulService } from "../core/contentful";
 
 export default function Home({ content }) {
   const { header, contact, timeline } = content;
@@ -21,11 +17,8 @@ export default function Home({ content }) {
 }
 
 export async function getStaticProps() {
-  console.log(process.env)
-  const content = await client.getEntries({
-    content_type: "layoutHome",
-  });
-
+  const contentfulService = new ContentfulService();
+  const content = await contentfulService.getContentType("layoutHome");
   return {
     revalidate: 1,
     props: { content: get(content, `items.[0].fields`, {}) },
