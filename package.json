@@ -8,8 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "lodash.isnil": "^4.0.0",
     "next": "9.5.3",
+    "next-router": "^1.3.6",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-spring": "^8.0.27",
+    "sass": "^1.27.0",
+    "styled-components": "^5.2.0"
   }
 }
