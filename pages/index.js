@@ -30,21 +30,3 @@ export async function getStaticProps() {
     props: { content: get(content, `items.[0].fields`, {}) },
   };
 }
-
-export async function getStaticPaths() {
-  // fallback: true means that the missing pages
-  // will not 404, and instead can render a fallback.
-  return { paths: [], fallback: true };
-}
-
-const data = {
-  header: "Hi, I'm John Chambers and I'm a Software Engineer",
-  subHeader:
-    "With 2+ years creating React.js applications within the gambling industry.",
-};
-
-const contactData = {
-  header: "Do you have any questions or projects you would like to discuss?",
-  subHeader:
-    "If you have a project you would like to discuss or ask for advice, you can send me an email at <a href='mailto:cjohn772@gmail.com'>cjohn772@gmail.com</a>",
-};
