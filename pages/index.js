@@ -5,8 +5,8 @@ import Contact from "../components/contact";
 import get from "lodash.get";
 
 const client = require("contentful").createClient({
-  space: "i0s1gpf5n765",
-  accessToken: "tJ5D8w26pBZu_K7S2CxXpACoPGqeAF46N9kLQxoMv7M",
+  space: "process.env.contentful_space_id",
+  accessToken: "process.env.contentful_access_token",
 });
 
 export default function Home({ content }) {
