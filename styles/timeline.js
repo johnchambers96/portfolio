@@ -8,7 +8,7 @@ export const StyledOl = styled.ol`
   flex-direction: column;
   width: 100%;
   position: relative;
-  margin: 0;
+  margin: 2rem 0;
   padding: 0;
   list-style: none;
   animation: ${fadeIn} .5s linear forwards;
