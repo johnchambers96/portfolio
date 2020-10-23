@@ -21,6 +21,7 @@ export default function Home({ content }) {
 }
 
 export async function getStaticProps() {
+  console.log(process.env)
   const content = await client.getEntries({
     content_type: "layoutHome",
   });
