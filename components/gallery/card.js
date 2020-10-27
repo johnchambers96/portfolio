@@ -1,19 +1,17 @@
-import { GalleryCard } from "../../styles/gallery";
-import isNil from "lodash.isnil";
+import { GalleryCard, GalleryImg, GalleryFooter } from "../../styles/gallery";
+import Link from "next/link";
 
-const Card = ({ data }) => {
-  console.log(data);
+const Card = ({ title, subTitle, link, imgSrc, imgAlt }) => {
   return (
-    <GalleryCard>
-      <img />
-      <div>{"title"}</div>
-      <div>
-        {
-          "some text which should be too long for this container. some text which should be too long for this container. some text which should be too long for this container. some text which should be too long for this container."
-        }
-      </div>
-      <div>{"Read More"}</div>
-    </GalleryCard>
+    <Link href={link}>
+      <GalleryCard>
+        <GalleryImg src={imgSrc} alt={imgAlt} />
+        <GalleryFooter>
+          <div className={"title"}>{title}</div>
+          <div className={"subtitle"}>{subTitle}</div>
+        </GalleryFooter>
+      </GalleryCard>
+    </Link>
   );
 };
 

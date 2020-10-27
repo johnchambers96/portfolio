@@ -132,7 +132,7 @@ export const TimelineCardContent = styled.div`
   font-weight: 600;
   height: 65px;
   display: flex;
-  padding-top: 6px;
+  padding-top: 12px;
   flex-direction: column;
   p {
     margin: 0;

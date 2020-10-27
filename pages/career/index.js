@@ -3,15 +3,27 @@ import { ContentfulService } from "../../core/contentful";
 import Header from "../../components/header";
 import Contact from "../../components/contact";
 import Gallery from "../../components/gallery";
+import Card from "../../components/gallery/card";
 import get from "lodash.get";
 
 export default function Career({ content }) {
   const { header, contact, careerHistory } = content;
-  console.log(content);
+
   return (
     <StyledContentContainer>
       <Header content={header} />
-      <Gallery content={careerHistory} />
+      <Gallery>
+        {careerHistory.map((item, index) => (
+          <Card
+            key={index}
+            title={item.fields.title}
+            subTitle={item.fields.jobDescription}
+            link={`/career/${item.fields.slug}`}
+            imgSrc={null}
+            imgAlt={null}
+          />
+        ))}
+      </Gallery>
       <Contact content={contact} />
     </StyledContentContainer>
   );
