@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeInUp } from "./keyframes";
 
 export const GalleryContainer = styled.div`
   display: flex;
@@ -21,6 +22,9 @@ export const GalleryCard = styled.div`
   box-sizing: border-box;
   transition: margin 500ms ease-in-out;
   color: ${({ theme }) => theme.text};
+  animation: ${fadeInUp} 0.5s linear forwards;
+  animation-delay: .5s;
+  opacity: 0;
   @media screen and (max-width: 780px) {
     max-width: 100%;
   }

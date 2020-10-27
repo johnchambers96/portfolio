@@ -20,7 +20,7 @@ const NavBar = ({ toggleTheme, theme }) => {
         setActiveTab("/projects");
         break;
       case "/career":
-      case "/career[slug]":
+      case "/career/[slug]":
         setActiveTab("/career");
         break;
       default:
