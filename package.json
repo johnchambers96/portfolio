@@ -8,8 +8,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "contentful": "^7.14.8",
+    "lodash.get": "^4.4.2",
     "lodash.isnil": "^4.0.0",
-    "next": "9.5.3",
+    "moment": "^2.29.1",
+    "next": "^10.0.0",
     "next-router": "^1.3.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",

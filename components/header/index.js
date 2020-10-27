@@ -1,13 +1,13 @@
 import { HeaderContainer, HeaderH1, HeaderP } from "../../styles/header";
 import isNil from "lodash.isnil";
 
-const Header = ({ content, children }) => {
-  if (isNil(content)) return null;
+const Header = ({ content }) => {
+  if (isNil(content) && isNil(content.fields)) return null;
+  const { title, subTitle } = content.fields;
   return (
     <HeaderContainer>
-      <HeaderH1>{content.header}</HeaderH1>
-      {!isNil(content.subHeader) && <HeaderP>{content.subHeader}</HeaderP>}
-      {!isNil(children) && children}
+      <HeaderH1>{title}</HeaderH1>
+      {!isNil(subTitle) && <HeaderP>{subTitle}</HeaderP>}
     </HeaderContainer>
   );
 };

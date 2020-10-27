@@ -4,37 +4,26 @@ import {
   StyledLi,
   TimelineBall,
   TimelineContent,
-  TimelineContentContainer
+  TimelineContentContainer,
 } from "../../styles/timeline";
+import Card from "./card";
 
-const Timeline = () => {
+const Timeline = ({ content }) => {
   return (
     <FlexBoxCenter>
       <StyledOl>
-        <StyledLi>
-          <TimelineBall />
-          <TimelineContent>
-            <TimelineContentContainer>{"content"}</TimelineContentContainer>
-          </TimelineContent>
-        </StyledLi>
-        <StyledLi>
-          <TimelineBall />
-          <TimelineContent>
-            <TimelineContentContainer>{"content"}</TimelineContentContainer>
-          </TimelineContent>
-        </StyledLi>
-        <StyledLi>
-          <TimelineBall />
-          <TimelineContent>
-            <TimelineContentContainer>{"content"}</TimelineContentContainer>
-          </TimelineContent>
-        </StyledLi>
-        <StyledLi>
-          <TimelineBall />
-          <TimelineContent>
-            <TimelineContentContainer>{"content"}</TimelineContentContainer>
-          </TimelineContent>
-        </StyledLi>
+        {content.map(({fields, sys}, index) => {
+          return (
+            <StyledLi key={index}>
+              <TimelineBall />
+              <TimelineContent>
+                <TimelineContentContainer>
+                  <Card data={fields} />
+                </TimelineContentContainer>
+              </TimelineContent>
+            </StyledLi>
+          );
+        })}
       </StyledOl>
     </FlexBoxCenter>
   );
