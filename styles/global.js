@@ -44,7 +44,6 @@ export const FlexBoxCenter = styled.div`
   align-items: center;
 `;
 
-
 export const GlobalButton = styled.a`
   background-color: ${({ theme }) => theme.toggleBorder};
   color:  ${({ theme }) => theme.body};
@@ -57,4 +56,7 @@ export const GlobalButton = styled.a`
   width: -webkit-fit-content; /* Chrome */
   border-radius: 5px;
   cursor: pointer;
-`
+  &:hover {
+    filter: brightness(0.9)
+  }
+`;

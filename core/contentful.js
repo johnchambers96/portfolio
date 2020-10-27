@@ -9,9 +9,10 @@ export class ContentfulService {
     accessToken: Token,
   });
 
-  async getContentType(slug) {
+  async getContentType(content, slug) {
     return await this.client.getEntries({
-      content_type: slug,
+      content_type: content,
+      "fields.slug[match]": slug,
     });
   }
 }

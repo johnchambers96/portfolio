@@ -51,7 +51,7 @@ export const StyledLi = styled.li`
   animation: ${fadeInUp} .5s linear forwards;
   opacity: 0;
   animation-delay .5s;
-  @media screen and (min-width: 780px) {
+  @media screen and (min-width: 781px) {
     &:nth-child(even) {
       > :last-child {
         float: right;
@@ -115,6 +115,34 @@ export const TimelineContentContainer = styled.div`
   padding: 9px;
   box-sizing: border-box;
   height: 100%;
+  min-height: 120px;
+  width: 100% !important;
 `;
 
+export const TimelineCardTitle = styled.p`
+  margin: 0;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 300;
+`;
 
+export const TimelineCardContent = styled.div`
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  height: 65px;
+  display: flex;
+  padding-top: 6px;
+  flex-direction: column;
+  p {
+    margin: 0;
+  }
+`;
+
+export const TimelineCardLink = styled.a`
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  color: ${({ theme }) => theme.toggleBorder};
+  float: right;
+`;

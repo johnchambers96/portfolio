@@ -6,6 +6,7 @@ import {
   TimelineContent,
   TimelineContentContainer,
 } from "../../styles/timeline";
+import Card from "./Card";
 
 const Timeline = ({ content }) => {
   return (
@@ -17,7 +18,7 @@ const Timeline = ({ content }) => {
               <TimelineBall />
               <TimelineContent>
                 <TimelineContentContainer>
-                  {/* Create a new component to handle the content */}
+                  <Card data={fields} />
                 </TimelineContentContainer>
               </TimelineContent>
             </StyledLi>
