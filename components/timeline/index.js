@@ -6,7 +6,7 @@ import {
   TimelineContent,
   TimelineContentContainer,
 } from "../../styles/timeline";
-import Card from "./Card";
+import Card from "./card";
 
 const Timeline = ({ content }) => {
   return (
