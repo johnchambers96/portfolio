@@ -18,13 +18,13 @@ export async function getStaticProps({ params }) {
 }
 
 export const getStaticPaths = async () => {
-  const contentfulService = new ContentfulService();
-  const content = await contentfulService.getContentType("projects");
-  const paths = content.items.map((item) => {
-    return { params: { slug: item.fields.slug } };
-  });
+  // const contentfulService = new ContentfulService();
+  // const content = await contentfulService.getContentType("projects");
+  // const paths = content.items.map((item) => {
+  //   return { params: { slug: item.fields.slug } };
+  // });
   return {
-    paths,
+    paths: [],
     fallback: true,
   };
 };
