@@ -1,17 +1,18 @@
 import { StyledContentContainer } from "../styles/global";
-import Header from "../components/header";
-import Timeline from "../components/timeline";
-import Contact from "../components/contact";
+import Pitch from "../components/pitch";
+import ControlPannel from "../components/controlPannel";
 import get from "lodash.get";
 import { ContentfulService } from "../core/contentful";
+import { useSelector } from "react-redux";
 
 export default function Home({ content }) {
-  const { header, contact, timeline } = content;
+  const {} = content;
+  const pitchSettings = useSelector((state) => state.settings);
+
   return (
     <StyledContentContainer>
-      <Header content={header} />
-      <Timeline content={timeline} />
-      <Contact content={contact} />
+      <ControlPannel pitchSettings={pitchSettings} />
+      <Pitch pitchSettings={pitchSettings} />
     </StyledContentContainer>
   );
 }

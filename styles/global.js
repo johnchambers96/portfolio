@@ -29,7 +29,7 @@ export const StyledContentContainer = styled.div`
   flex: 1;
   height: 100%;
   padding: 0 2rem;
-  flex-direction: column;
+  flex-direction: row;
   box-sizing: border-box;
 `;
 
