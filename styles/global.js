@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { fadeInUp } from "./keyframes";
 
 export const GlobalStyles = createGlobalStyle`
   *,
@@ -29,7 +28,7 @@ export const StyledContentContainer = styled.div`
   flex: 1;
   height: 100%;
   padding: 0 2rem;
-  flex-direction: row;
+  flex-direction: column;
   box-sizing: border-box;
 `;
 
@@ -42,21 +41,4 @@ export const FlexBoxCenter = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-
-export const GlobalButton = styled.a`
-  background-color: ${({ theme }) => theme.toggleBorder};
-  color:  ${({ theme }) => theme.body};
-  animation: ${fadeInUp} .5s linear forwards;
-  animation-delay: 1s;
-  opacity: 0;
-  padding: 20px;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-  width: -moz-fit-content;    /* Firefox/Gecko */
-  width: -webkit-fit-content; /* Chrome */
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    filter: brightness(0.9)
-  }
 `;

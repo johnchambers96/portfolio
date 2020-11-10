@@ -21,7 +21,7 @@ export const StyledA = styled.a`
   }
   &.active {
     border-bottom: 4px solid ${({ theme }) => theme.toggleBorder};
-    transition: color 0.25s linear, border 0.25s linear;
+    transition: color .25s linear, border .25s linear;
   }
 `;
 
@@ -33,19 +33,11 @@ export const StyledContaingDiv = styled.div`
   > :not(:last-child) {
     margin: 0px 1.4rem;
   }
-  @media screen and (max-width: 780px) {
-    > :not(:last-child) {
-      margin: 0px 0.8rem;
-    }
-  }
 `;
 
 export const StyledIcon = styled.img`
   height: 24px;
   width: 24px;
   cursor: pointer;
-  margin: -8px 0px 0px 1.4rem;
-  @media screen and (max-width: 780px) {
-    margin: -8px 0px 0px 0.8rem;
-  }
-`;
+  margin: -8px 0px 0px 0px;
+`

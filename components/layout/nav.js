@@ -15,13 +15,9 @@ const NavBar = ({ toggleTheme, theme }) => {
 
   useEffect(() => {
     switch (router.pathname) {
-      case "/about":
-      case "/about/[slug]":
-        setActiveTab("/about");
-        break;
-      case "/career":
-      case "/career/[slug]":
-        setActiveTab("/career");
+      case "/projects":
+      case "/projects/[slug]":
+        setActiveTab("/projects");
         break;
       default:
         setActiveTab("/");
@@ -33,18 +29,13 @@ const NavBar = ({ toggleTheme, theme }) => {
     <StyledNavBar>
       <StyledContaingDiv>
         <Link href={"/"} passHref>
-          <StyledA>{"Share My 11"}</StyledA>
+          <StyledA>{"John Chambers"}</StyledA>
         </Link>
       </StyledContaingDiv>
       <StyledContaingDiv>
-        <Link href={"/about"} passHref>
-          <StyledA className={activeTab === "/about" && "active"}>
-            {"About"}
-          </StyledA>
-        </Link>
-        <Link href={"/career"} passHref>
-          <StyledA className={activeTab === "/career" && "active"}>
-            {"Career"}
+        <Link href={"/projects"} passHref>
+          <StyledA className={activeTab === "/projects" && "active"}>
+            {"Projects"}
           </StyledA>
         </Link>
         {theme === themeTypes.LIGHT ? (
