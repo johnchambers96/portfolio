@@ -19,6 +19,10 @@ const NavBar = ({ toggleTheme, theme }) => {
       case "/about/[slug]":
         setActiveTab("/about");
         break;
+      case "/career":
+      case "/career/[slug]":
+        setActiveTab("/career");
+        break;
       default:
         setActiveTab("/");
         break;
@@ -36,6 +40,11 @@ const NavBar = ({ toggleTheme, theme }) => {
         <Link href={"/about"} passHref>
           <StyledA className={activeTab === "/about" && "active"}>
             {"About"}
+          </StyledA>
+        </Link>
+        <Link href={"/career"} passHref>
+          <StyledA className={activeTab === "/career" && "active"}>
+            {"Career"}
           </StyledA>
         </Link>
         {theme === themeTypes.LIGHT ? (
